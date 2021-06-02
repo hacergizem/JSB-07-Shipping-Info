@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://image.flaticon.com/icons/png/512/859/859043.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="https://image.flaticon.com/icons/png/512/859/859043.png"
+    />
     <title>Shipping Info</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <section id="main-container">
-
-        <div class="photo-container">
-            <p class="text"><strong id="big-title">Shipping</strong><br>Project</p>
-            <img class="image" src="src/shopping.png" alt="Shipping Image">
-        </div>
-
-        <div class="textbox-container">
-
-            <div class="user-side">
-                <p class="border-bottom title">Kullanıcı Bilgileri</p>
-                <input type="text" class="height-textbox" placeholder="İsim Soyisim">
-                <input type="text" class="height-textbox" placeholder="Telefon">
-                <textarea rows="5" placeholder="Adres"></textarea>
-            </div>
-
-            <div class="invoice-side">
-                <div class="border-bottom" style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
-                    <p class="title">Fatura Bilgileri</p>
-                    <div style="display: flex; flex-direction: row;">
-                        <label for="vehicle1" style="font-size: 11px; padding-right: 5px; color:#686868"> Fatura bilgisi olarak üsttekileri kullan</label>
-                        <input type="checkbox" class="checkbox-round" id="vehicle1" name="vehicle1" value="Bike">
-                    </div>
-                </div>                
-                <input type="text" class="height-textbox" placeholder="Fatura Sahibi">
-                <input type="text" class="height-textbox" placeholder="T.C. / Vergi Numarası">
-                <textarea rows="5" placeholder="Fatura Adresi"></textarea>
-            </div>
-
-            <button class="btn">Sipariş Tamamla</button>
-
-        </div>
-        
-
-    </section>
-
-    <footer>
-       <p>
-           <b>Tasarım: </b>Yunus - <b>HTML/CSS: </b> Gizem - <b>JavaScript:</b> Sinan
+      <div class="photo-container">
+        <p class="text">
+          <strong id="big-title">Shipping</strong><br />Project
         </p>
-    </footer>
-</body>
+        <img class="image" src="src/shopping.png" alt="Shipping Image" />
+      </div>
 
+      <div class="textbox-container">
+        <div class="user-side">
+          <p class="border-bottom title">Kullanıcı Bilgileri</p>
+          <input
+            type="text"
+            class="height-textbox isim"
+            placeholder="İsim Soyisim"
+          />
+          <input
+            type="text"
+            class="height-textbox telefon"
+            placeholder="Telefon"
+          />
+          <textarea rows="5" class="adres" placeholder="Adres"></textarea>
+        </div>
+
+        <div class="invoice-side">
+          <div class="border-bottom" id="invoice-side-title">
+            <p class="title">Fatura Bilgileri</p>
+            <div style="display: flex; flex-direction: row">
+              <label
+                for="vehicle1"
+                style="font-size: 11px; padding-right: 5px; color: #686868"
+              >
+                Fatura bilgisi olarak üsttekileri kullan</label
+              >
+              <input
+                type="checkbox"
+                class="checkbox-round check"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              />
+            </div>
+          </div>
+          <input
+            type="text"
+            class="height-textbox fatura"
+            placeholder="Fatura Sahibi"
+          />
+          <input
+            type="text"
+            class="height-textbox"
+            placeholder="T.C. / Vergi Numarası"
+          />
+          <textarea
+            rows="5"
+            class="fatura-adresi"
+            placeholder="Fatura Adresi"
+          ></textarea>
+        </div>
+
+        <button class="btn">Sipariş Tamamla</button>
+      </div>
+    </section>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1 class="modal-isim">Siparişiniz tamamlandı.</h1>
+      <p class="modal-icerik"></p>
+    </div>
+    <div class="overlay hidden"></div>
+    <footer>
+      <p>
+        <b>Tasarım: </b>Yunus - <b>HTML/CSS: </b> Gizem -
+        <b>JavaScript:</b> Sinan
+      </p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
 </html>
